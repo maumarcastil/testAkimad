@@ -3,7 +3,6 @@ import { Row, Col, Card, Avatar } from "antd";
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import moment from "moment";
-import { StarFilled } from "@ant-design/icons";
 
 const { Meta } = Card;
 const UserDetails = () => {
@@ -14,9 +13,10 @@ const UserDetails = () => {
 
   useEffect(() => {
     getDataUser();
+    // eslint-disable-next-line
   }, []);
 
-  const getDataUser = async () => {
+  async function getDataUser() {
     await axios
       .get(`https://api.github.com/users/${state?.user?.login}`)
       .then((response) => {
@@ -31,7 +31,7 @@ const UserDetails = () => {
         });
       })
       .catch((err) => console.error(err));
-  };
+  }
 
   return (
     <div className="App">

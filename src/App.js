@@ -1,6 +1,6 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RootRouter from "./Routers";
+import { BrowserRouter } from "react-router-dom";
 
 /* Redux */
 import { Provider } from "react-redux";

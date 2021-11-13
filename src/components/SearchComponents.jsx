@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { getUsersGithub } from "../actions";
 import { Input, message, Row, Result } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import { SmileOutlined, CloseCircleOutlined } from "@ant-design/icons";
+import { SmileOutlined } from "@ant-design/icons";
 
 const { Search } = Input;
 
